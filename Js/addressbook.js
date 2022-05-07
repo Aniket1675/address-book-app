@@ -41,19 +41,20 @@ class Contact{
     
         set address(address)
         {
-            let words = address.split(" ");
-            if(words.length>1){
-                let addressRegex = RegExp('^[A-Za-z,/.0-9]{3,}$');
-                for(const word of words){
-                    if(!addressRegex.test(word))
-                    throw 'Address Invalid';
-                }
-                this._address = address;
-            }
-            else{
-                throw 'Address Invalid';
-            }
-            // this._address=address;
+            // let words = address.split(" ");
+            // if(words.length>1){
+            //     // let addressRegex = RegExp('^[A-Za-z,/.0-9]{3,}$');
+            //     let addressRegex = RegExp('^[A-Za-z,/.0-9]{3,}$');
+            //     for(const word of words){
+            //         if(!addressRegex.test(word))
+            //         throw 'Address Invalid';
+            //     }
+            //     this._address = address;
+            // }
+            // else{
+            //     throw 'Address Invalid';
+            // }
+            this._address=address;
         }
     
         get city(){
